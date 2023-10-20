@@ -7,7 +7,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+        <a class="nav-link" data-toggle="collapse" href="#" aria-expanded="false" aria-controls="icons">
           <i class="ti-pencil-alt menu-icon"></i>
           <span class="menu-title">Pandaftaran</span>
         </a>

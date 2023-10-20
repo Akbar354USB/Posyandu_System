@@ -5,6 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="{{ asset("backend/images/logo m.png") }}">
   <title>Posyandu</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{ asset('backend/vendors/feather/feather.css') }}">
@@ -35,33 +36,10 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
-          <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="row">
-                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h3 class="font-weight-bold">Selamat Datang User</h3>
-                  <h6 class="font-weight-normal mb-0">Posyandu Sahabat Masyarakat</h6>
-                </div>
-                <div class="col-12 col-xl-4">
-                 <div class="justify-content-end d-flex">
-                 </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title">Advanced Table</p>
-                  </div>
-                </div>
-
-                
-              </div>
-            </div>
+          @yield('content')
         </div>
+
+
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         @include('backend/partial/footer')
