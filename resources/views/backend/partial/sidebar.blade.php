@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="">
           <i class="icon-grid menu-icon"></i>
           <span class="menu-title">Dashboard</span>
         </a>
@@ -20,27 +20,27 @@
         </a>
         <div class="collapse" id="form-elements">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Data Balita</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('balita-index') }}">Data Balita</a></li>
           </ul>
         </div>
         <div class="collapse" id="form-elements">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Data Ibu Hamil</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('balita-index') }}">Data Ibu Hamil</a></li>
           </ul>
         </div>
         <div class="collapse" id="form-elements">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Data Ibu Nifas</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('balita-index') }}">Data Ibu Nifas</a></li>
           </ul>
         </div>
         <div class="collapse" id="form-elements">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Data KB</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('kb-index') }}">Data KB</a></li>
           </ul>
         </div>
         <div class="collapse" id="form-elements">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Data PUS</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('balita-index') }}">Data PUS</a></li>
           </ul>
         </div>
       </li>
