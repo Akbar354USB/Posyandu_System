@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BalitaController;
 use App\Http\Controllers\KbController;
+use App\Http\Controllers\PosyanduController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,7 @@ Route::get('/kb/create', [KbController::class, 'create'])->name('kb-create');
 //route data Balita
 Route::get('/balita/index', [BalitaController::class, 'index'])->name('balita-index');
 Route::get('/balita/create', [BalitaController::class, 'create'])->name('balita-create');
+
+//route data Posyandu
+Route::get('/posyandu/index', [PosyanduController::class, 'index'])->name('posyandu-index');
+Route::get('/posyandu/create', [PosyanduController::class, 'create'])->name('posyandu-create');

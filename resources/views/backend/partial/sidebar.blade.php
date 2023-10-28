@@ -43,6 +43,11 @@
             <li class="nav-item"><a class="nav-link" href="{{ route('balita-index') }}">Data PUS</a></li>
           </ul>
         </div>
+        <div class="collapse" id="form-elements">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"><a class="nav-link" href="{{ route('posyandu-index') }}">Data Posyandu</a></li>
+          </ul>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
