@@ -32,3 +32,4 @@ Route::get('/balita/create', [BalitaController::class, 'create'])->name('balita-
 //route data Posyandu
 Route::get('/posyandu/index', [PosyanduController::class, 'index'])->name('posyandu-index');
 Route::get('/posyandu/create', [PosyanduController::class, 'create'])->name('posyandu-create');
+Route::post('posyandu/store', [PosyanduController::class, 'store'])->name('posyandu-store');
