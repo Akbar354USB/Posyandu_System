@@ -31,23 +31,13 @@
               </tr>
             </thead>
             <tbody>
+              @foreach ($posyandu as $key => $item)
               <tr>
-                <td align="center">
-                  tes
-                </td>
-                <td align="center">
-                  tes
-                </td>
-                <td align="center">
-                    TES
-                  </div>
-                </td>
-                <td align="center">
-                  tes
-                </td>
-                <td align="center">
-                tes
-                </td>
+                <td align="center">{{ $key + 1 }}</td>
+                <td align="center">{{ $item->name }}</td>
+                <td align="center">{{ $item->adress }}</td>
+                <td align="center">{{ $item->telpon }}</td>
+                <td align="center">{{ $item->village }}</td>
                 <td align="center">
                     {{-- <button type="button" class="btn btn-inverse-info btn-icon">
                         <i class="ti-pencil"></i>
@@ -58,6 +48,8 @@
                     </form>
                 </td>
               </tr>
+              @endforeach
+              
             </tbody>
           </table>
         </div>

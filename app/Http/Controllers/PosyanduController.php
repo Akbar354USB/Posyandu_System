@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 class PosyanduController extends Controller
 {
     public function index(){
-        return view('Induk.Posyandu.index');
+        $posyandu = Posyandu::all();
+        
+        // return view('Admin.Kelas.index', compact('kelas'));
+        return view('Induk.Posyandu.index', compact('posyandu'));
     }
 
     public function create(){
