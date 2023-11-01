@@ -32,6 +32,15 @@ class PosyanduController extends Controller
         ]);
 
         Posyandu::create($request->all());
+        return redirect()->route('posyandu-index');
         // return redirect()->route('kelas-index')->with('status', 'Sukses Tambah Data Kelas');
+    }
+
+    public function destroy($id){
+        $posyandu = Posyandu::where("id", $id)->first();
+        $posyandu->delete();
+        
+        // return redirect()->route('kelas-index')->with('status', 'Sukses Hapus Data Kelas');
+        return redirect()->route('posyandu-index');
     }
 }

@@ -43,8 +43,10 @@
                         <i class="ti-pencil"></i>
                       </button> --}}
                     <a class="btn btn-inverse-info" href="" ><i class="ti-pencil"></i></a>
-                    <form action="" method="post" style="display: inline" class="form-check-inline">
-                        <button class="btn btn-inverse-danger" type="submit"><i class="ti-trash"></i></button>
+                    <form action="{{ route('posyandu-delete', $item->id) }}" method="post" style="display: inline" class="form-check-inline">
+                      @csrf
+                      @method('DELETE')
+                      <button class="btn btn-inverse-danger" type="submit"><i class="ti-trash"></i></button>
                     </form>
                 </td>
               </tr>
