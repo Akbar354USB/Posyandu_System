@@ -42,7 +42,7 @@
                     {{-- <button type="button" class="btn btn-inverse-info btn-icon">
                         <i class="ti-pencil"></i>
                       </button> --}}
-                    <a class="btn btn-inverse-info" href="" ><i class="ti-pencil"></i></a>
+                    <a class="btn btn-inverse-info" href="{{ route('posyandu-edit', $item->id) }}" ><i class="ti-pencil"></i></a>
                     <form action="{{ route('posyandu-delete', $item->id) }}" method="post" style="display: inline" class="form-check-inline">
                       @csrf
                       @method('DELETE')

@@ -34,3 +34,5 @@ Route::get('/posyandu/index', [PosyanduController::class, 'index'])->name('posya
 Route::get('/posyandu/create', [PosyanduController::class, 'create'])->name('posyandu-create');
 Route::post('posyandu/store', [PosyanduController::class, 'store'])->name('posyandu-store');
 Route::delete('/posyandu/delete{id}', [PosyanduController::class, 'destroy'])->name('posyandu-delete');
+Route::get('/posyandu/edit{id}', [PosyanduController::class, 'edit'])->name('posyandu-edit');
+Route::put('/posyandu/update{id}', [PosyanduController::class, 'update'])->name('posyandu-update');

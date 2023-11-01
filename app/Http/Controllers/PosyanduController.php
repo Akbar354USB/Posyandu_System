@@ -39,8 +39,21 @@ class PosyanduController extends Controller
     public function destroy($id){
         $posyandu = Posyandu::where("id", $id)->first();
         $posyandu->delete();
-        
+
         // return redirect()->route('kelas-index')->with('status', 'Sukses Hapus Data Kelas');
+        return redirect()->route('posyandu-index');
+    }
+
+    public function edit($id){
+        $posyandu = Posyandu::where("id", $id)->first();
+
+        return view('Induk.Posyandu.edit', compact('posyandu'));
+    }
+
+    public function update(Request $request, $id){
+        $posyandu = Posyandu::where("id", $id)->first();
+        $posyandu->update($request->all());
+
         return redirect()->route('posyandu-index');
     }
 }
