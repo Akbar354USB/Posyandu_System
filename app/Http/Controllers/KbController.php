@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class KbController extends Controller
 {
     public function index(){
-        return view('Induk.KB.index');
+        $kb = Kb::all();
+        
+        return view('Induk.KB.index', compact('kb'));
     }
 
     public function create(){
