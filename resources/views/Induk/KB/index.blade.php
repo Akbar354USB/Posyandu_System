@@ -30,7 +30,7 @@
                 <td align="center">{{ $item->installed }}</td>
                 <td align="center">{{ $item->uninstal }}</td>
                 <td>
-                  <a class="btn btn-inverse-info" href="" ><i class="ti-pencil"></i></a>
+                  <a class="btn btn-inverse-info" href="{{ route('kb-edit', $item->id) }}" ><i class="ti-pencil"></i></a>
                     <form action="" method="post" style="display: inline" class="form-check-inline">
                       @csrf
                       @method('DELETE')

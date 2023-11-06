@@ -25,6 +25,8 @@ Route::get('/', function () {
 Route::get('/kb/index', [KbController::class, 'index'])->name('kb-index');
 Route::get('/kb/create', [KbController::class, 'create'])->name('kb-create');
 Route::post('kb/store', [KbController::class, 'store'])->name('kb-store');
+Route::get('/kb/edit{id}', [KbController::class, 'edit'])->name('kb-edit');
+Route::put('/kb/update{id}', [KbController::class, 'update'])->name('kb-update');
 
 //route data Balita
 Route::get('/balita/index', [BalitaController::class, 'index'])->name('balita-index');

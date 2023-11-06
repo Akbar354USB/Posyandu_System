@@ -38,17 +38,6 @@ class KbController extends Controller
         return redirect()->route('kb-index');
     }
 
-    // public function index(){
-    //     $posyandu = Posyandu::all();
-        
-    //     // return view('Admin.Kelas.index', compact('kelas'));
-    //     return view('Induk.Posyandu.index', compact('posyandu'));
-    // }
-
-    // public function create(){
-    //     return view('Induk.Posyandu.create');
-    // }
-
 
     // public function destroy($id){
     //     $posyandu = Posyandu::where("id", $id)->first();
@@ -58,16 +47,16 @@ class KbController extends Controller
     //     return redirect()->route('posyandu-index');
     // }
 
-    // public function edit($id){
-    //     $posyandu = Posyandu::where("id", $id)->first();
+    public function edit($id){
+        $kb = Kb::where("id", $id)->first();
 
-    //     return view('Induk.Posyandu.edit', compact('posyandu'));
-    // }
+        return view('Induk.KB.edit', compact('kb'));
+    }
 
-    // public function update(Request $request, $id){
-    //     $posyandu = Posyandu::where("id", $id)->first();
-    //     $posyandu->update($request->all());
+    public function update(Request $request, $id){
+        $kb = Kb::where("id", $id)->first();
+        $kb->update($request->all());
 
-    //     return redirect()->route('posyandu-index');
-    // }
+        return redirect()->route('kb-index');
+    }
 }
