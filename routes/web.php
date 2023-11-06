@@ -27,6 +27,7 @@ Route::get('/kb/create', [KbController::class, 'create'])->name('kb-create');
 Route::post('kb/store', [KbController::class, 'store'])->name('kb-store');
 Route::get('/kb/edit{id}', [KbController::class, 'edit'])->name('kb-edit');
 Route::put('/kb/update{id}', [KbController::class, 'update'])->name('kb-update');
+Route::delete('/kb/delete{id}', [KbController::class, 'destroy'])->name('kb-delete');
 
 //route data Balita
 Route::get('/balita/index', [BalitaController::class, 'index'])->name('balita-index');

@@ -5,6 +5,7 @@
   <div class="card">
     <div class="card-body">
         <h3 class="text-center mb-3">DAFTAR PESERTA KB</h3>
+        <a href="{{ route('kb-create') }}"><button type="button" class="btn btn-primary btn-rounded btn-fw mb-2">+ data peserta</button></a>
         <div class="table-responsive">
           <table class="table table-striped">
             <thead>
@@ -31,7 +32,7 @@
                 <td align="center">{{ $item->uninstal }}</td>
                 <td>
                   <a class="btn btn-inverse-info" href="{{ route('kb-edit', $item->id) }}" ><i class="ti-pencil"></i></a>
-                    <form action="" method="post" style="display: inline" class="form-check-inline">
+                    <form action="{{ route('kb-delete', $item->id) }}" method="post" style="display: inline" class="form-check-inline">
                       @csrf
                       @method('DELETE')
                       <button class="btn btn-inverse-danger" type="submit"><i class="ti-trash"></i></button>

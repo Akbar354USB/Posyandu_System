@@ -39,13 +39,12 @@ class KbController extends Controller
     }
 
 
-    // public function destroy($id){
-    //     $posyandu = Posyandu::where("id", $id)->first();
-    //     $posyandu->delete();
+    public function destroy($id){
+        $kb = Kb::where("id", $id)->first();
+        $kb->delete();
 
-    //     // return redirect()->route('kelas-index')->with('status', 'Sukses Hapus Data Kelas');
-    //     return redirect()->route('posyandu-index');
-    // }
+        return redirect()->route('kb-index');
+    }
 
     public function edit($id){
         $kb = Kb::where("id", $id)->first();
