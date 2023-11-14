@@ -33,7 +33,6 @@ class KbController extends Controller
             'installed.required' => 'tanggal pasang belum di masukkan',
             'uninstal.required' => 'taggal di lepas belum di masukkan',
         ]);
-
         Kb::create($request->all());
         return redirect()->route('kb-index');
     }
@@ -48,7 +47,7 @@ class KbController extends Controller
 
     public function edit($id){
         $kb = Kb::where("id", $id)->first();
-
+        
         return view('Induk.KB.edit', compact('kb'));
     }
 

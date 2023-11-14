@@ -30,8 +30,9 @@ Route::put('/kb/update{id}', [KbController::class, 'update'])->name('kb-update')
 Route::delete('/kb/delete{id}', [KbController::class, 'destroy'])->name('kb-delete');
 
 //route data Balita
-Route::get('/balita/create', [BalitaController::class, 'create'])->name('balita-create');
+Route::get('/balita/create', [ToddlerController::class, 'create'])->name('todller-create');
 Route::get('/balita/index', [ToddlerController::class, 'index'])->name('toddler-index');
+Route::post('balita/store', [ToddlerController::class, 'store'])->name('toddler-store');
 
 //route data Posyandu
 Route::get('/posyandu/index', [PosyanduController::class, 'index'])->name('posyandu-index');

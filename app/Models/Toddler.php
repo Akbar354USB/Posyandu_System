@@ -17,4 +17,8 @@ class Toddler extends Model
         'gender',
         'posyandu_id'
     ];
+
+    public function posyandu(){
+        return $this->belongsTo(Posyandu::class);
+    }
 }
