@@ -32,7 +32,14 @@
                 <td align="center">{{ $item->gender }}</td>
                 <td align="center">{{ $item->name_mom }}</td>
                 <td align="center">{{ $item->posyandu->name }}</td>
-                <td align="center"></td>
+                <td align="center">
+                  <a class="btn btn-inverse-info" href="{{ route('toddler-edit', $item->id) }}" ><i class="ti-pencil"></i></a>
+                    <form action="{{ route('toddler-delete', $item->id) }}" method="post" style="display: inline" class="form-check-inline">
+                      @csrf
+                      @method('DELETE')
+                      <button class="btn btn-inverse-danger" type="submit"><i class="ti-trash"></i></button>
+                    </form>
+                </td>
               </tr> 
               @endforeach
             </tbody>

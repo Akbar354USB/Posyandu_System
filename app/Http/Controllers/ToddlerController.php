@@ -40,4 +40,25 @@ class ToddlerController extends Controller
         Toddler::create($request->all());
         return redirect()->route('toddler-index');
     }
+
+    public function destroy($id){
+        $toddler = Toddler::where("id", $id)->first();
+        $toddler->delete();
+
+        return redirect()->route('toddler-index');
+    }
+
+    public function edit($id){
+        $toddler = Toddler::where("id", $id)->first();
+        $posyandu = Posyandu::all();
+        
+        return view('Induk.Balita.edit', compact('toddler','posyandu'));
+    }
+
+    public function update(Request $request, $id){
+        $toddler = Toddler::where("id", $id)->first();
+        $toddler->update($request->all());
+
+        return redirect()->route('toddler-index');
+    }
 }
