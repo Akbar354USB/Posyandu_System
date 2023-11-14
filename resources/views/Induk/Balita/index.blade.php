@@ -9,48 +9,28 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th>
-                  NO
-                </th>
-                <th>
-                  NIK
-                </th>
-                <th>
-                  NAMA
-                </th>
-                <th>
-                  TANGGAL LAHIR
-                </th>
-                <th>
-                    NAMA AYAH
-                  </th>
-                  <th>
-                    NAMA IBU
-                  </th>
+                <th class="text-center">NO</th>
+                <th class="text-center">NIK</th>
+                <th class="text-center">NAMA</th>
+                <th class="text-center">ALAMAT</th>
+                <th class="text-center">TANGGAL LAHIR</th>
+                <th class="text-center">JENIS KELAMIN</th>
+                <th class="text-center">NAMA IBU</th>
+                <TH class="text-center">AKSI</TH>
               </tr>
             </thead>
             <tbody>
+              @foreach ($collection as $item)
               <tr>
-                <td>
-                  tes
-                </td>
-                <td>
-                  tes
-                </td>
-                <td>
-                    TES
-                  </div>
-                </td>
-                <td>
-                  tes
-                </td>
-                <td>
-                tes
-                </td>
-                <td>
-                tes
-                </td>
-              </tr>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+              </tr> 
+              @endforeach
             </tbody>
           </table>
         </div>

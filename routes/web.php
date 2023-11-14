@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\BalitaController;
 use App\Http\Controllers\KbController;
+use App\Http\Controllers\ToddlerController;
 use App\Http\Controllers\PosyanduController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,8 +30,8 @@ Route::put('/kb/update{id}', [KbController::class, 'update'])->name('kb-update')
 Route::delete('/kb/delete{id}', [KbController::class, 'destroy'])->name('kb-delete');
 
 //route data Balita
-Route::get('/balita/index', [BalitaController::class, 'index'])->name('balita-index');
 Route::get('/balita/create', [BalitaController::class, 'create'])->name('balita-create');
+Route::get('/balita/index', [ToddlerController::class, 'index'])->name('toddler-index');
 
 //route data Posyandu
 Route::get('/posyandu/index', [PosyanduController::class, 'index'])->name('posyandu-index');
