@@ -7,9 +7,9 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#" aria-expanded="false" aria-controls="icons">
+        <a class="nav-link" href="{{ route('service-index') }}">
           <i class="ti-pencil-alt menu-icon"></i>
-          <span class="menu-title">Pandaftaran</span>
+          <span class="menu-title">Pendaftaran</span>
         </a>
       </li>
       <li class="nav-item">
@@ -20,7 +20,7 @@
         </a>
         <div class="collapse" id="form-elements">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="">Data Balita</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('toddler-index') }}">Data Balita</a></li>
           </ul>
         </div>
         <div class="collapse" id="form-elements">

@@ -3,6 +3,7 @@
 use App\Http\Controllers\KbController;
 use App\Http\Controllers\ToddlerController;
 use App\Http\Controllers\PosyanduController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,3 +45,11 @@ Route::post('posyandu/store', [PosyanduController::class, 'store'])->name('posya
 Route::delete('/posyandu/delete{id}', [PosyanduController::class, 'destroy'])->name('posyandu-delete');
 Route::get('/posyandu/edit{id}', [PosyanduController::class, 'edit'])->name('posyandu-edit');
 Route::put('/posyandu/update{id}', [PosyanduController::class, 'update'])->name('posyandu-update');
+
+//route data layanan
+Route::get('/service/index', [ServiceController::class, 'index'])->name('service-index');
+Route::get('/service/create', [ServiceController::class, 'create'])->name('service-create');
+Route::post('service/store', [ServiceController::class, 'store'])->name('service-store');
+Route::delete('/service/delete{id}', [ServiceController::class, 'destroy'])->name('service-delete');
+Route::get('/service/edit{id}', [ServiceController::class, 'edit'])->name('service-edit');
+Route::put('/service/update{id}', [ServiceController::class, 'update'])->name('service-update');
