@@ -3,6 +3,7 @@
 use App\Http\Controllers\KbController;
 use App\Http\Controllers\ToddlerController;
 use App\Http\Controllers\PosyanduController;
+use App\Http\Controllers\PregnantController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
@@ -53,3 +54,11 @@ Route::post('service/store', [ServiceController::class, 'store'])->name('service
 Route::delete('/service/delete{id}', [ServiceController::class, 'destroy'])->name('service-delete');
 Route::get('/service/edit{id}', [ServiceController::class, 'edit'])->name('service-edit');
 Route::put('/service/update{id}', [ServiceController::class, 'update'])->name('service-update');
+
+//route data layanan
+Route::get('/pregnant/index', [PregnantController::class, 'index'])->name('pregnant-index');
+Route::get('/pregnant/create', [PregnantController::class, 'create'])->name('pregnant-create');
+Route::post('pregnant/store', [PregnantController::class, 'store'])->name('pregnant-store');
+Route::delete('/pregnant/delete{id}', [PregnantController::class, 'destroy'])->name('pregnant-delete');
+Route::get('/pregnant/edit{id}', [PregnantController::class, 'edit'])->name('pregnant-edit');
+Route::put('/pregnant/update{id}', [PregnantController::class, 'update'])->name('pregnant-update');

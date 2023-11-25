@@ -29,7 +29,7 @@
           @enderror
         </div>
         <div class="form-group">
-          <label >BERAT BADAN (cm)</label>
+          <label >BERAT BADAN (kg)</label>
           <input type="text" class="form-control" name="weight">
           @error('weight')
           <span class="text-danger">
