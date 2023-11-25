@@ -25,7 +25,7 @@
         </div>
         <div class="collapse" id="form-elements">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="">Data Ibu Hamil</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('pregnant-index') }}">Data Ibu Hamil</a></li>
           </ul>
         </div>
         <div class="collapse" id="form-elements">

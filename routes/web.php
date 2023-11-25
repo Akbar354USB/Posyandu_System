@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\KbController;
+use App\Http\Controllers\PostpartumController;
 use App\Http\Controllers\ToddlerController;
 use App\Http\Controllers\PosyanduController;
 use App\Http\Controllers\PregnantController;
@@ -55,10 +56,18 @@ Route::delete('/service/delete{id}', [ServiceController::class, 'destroy'])->nam
 Route::get('/service/edit{id}', [ServiceController::class, 'edit'])->name('service-edit');
 Route::put('/service/update{id}', [ServiceController::class, 'update'])->name('service-update');
 
-//route data layanan
+//route data ibu hamil
 Route::get('/pregnant/index', [PregnantController::class, 'index'])->name('pregnant-index');
 Route::get('/pregnant/create', [PregnantController::class, 'create'])->name('pregnant-create');
 Route::post('pregnant/store', [PregnantController::class, 'store'])->name('pregnant-store');
 Route::delete('/pregnant/delete{id}', [PregnantController::class, 'destroy'])->name('pregnant-delete');
 Route::get('/pregnant/edit{id}', [PregnantController::class, 'edit'])->name('pregnant-edit');
 Route::put('/pregnant/update{id}', [PregnantController::class, 'update'])->name('pregnant-update');
+
+//route data ibu nifas
+Route::get('/postpartum/index', [PostpartumController::class, 'index'])->name('postpartum-index');
+Route::get('/postpartum/create', [PostpartumControllerr::class, 'create'])->name('postpartum-create');
+Route::post('postpartum/store', [PostpartumController::class, 'store'])->name('postpartum-store');
+Route::delete('/postpartum/delete{id}', [PostpartumController::class, 'destroy'])->name('postpartum-delete');
+Route::get('/postpartum/edit{id}', [PostpartumController::class, 'edit'])->name('postpartum-edit');
+Route::put('/postpartum/update{id}', [PostpartumController::class, 'update'])->name('postpartum-update');
