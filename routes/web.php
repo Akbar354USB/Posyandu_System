@@ -66,7 +66,7 @@ Route::put('/pregnant/update{id}', [PregnantController::class, 'update'])->name(
 
 //route data ibu nifas
 Route::get('/postpartum/index', [PostpartumController::class, 'index'])->name('postpartum-index');
-Route::get('/postpartum/create', [PostpartumControllerr::class, 'create'])->name('postpartum-create');
+Route::get('/postpartum/create', [PostpartumController::class, 'create'])->name('postpartum-create');
 Route::post('postpartum/store', [PostpartumController::class, 'store'])->name('postpartum-store');
 Route::delete('/postpartum/delete{id}', [PostpartumController::class, 'destroy'])->name('postpartum-delete');
 Route::get('/postpartum/edit{id}', [PostpartumController::class, 'edit'])->name('postpartum-edit');
