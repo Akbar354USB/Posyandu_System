@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FertileController;
 use App\Http\Controllers\KbController;
 use App\Http\Controllers\PostpartumController;
 use App\Http\Controllers\ToddlerController;
@@ -71,3 +72,11 @@ Route::post('postpartum/store', [PostpartumController::class, 'store'])->name('p
 Route::delete('/postpartum/delete{id}', [PostpartumController::class, 'destroy'])->name('postpartum-delete');
 Route::get('/postpartum/edit{id}', [PostpartumController::class, 'edit'])->name('postpartum-edit');
 Route::put('/postpartum/update{id}', [PostpartumController::class, 'update'])->name('postpartum-update');
+
+//route data PUS
+Route::get('/fertile/index', [FertileController::class, 'index'])->name('fertile-index');
+Route::get('/fertile/create', [FertileController::class, 'create'])->name('fertile-create');
+Route::post('fertile/store', [FertileController::class, 'store'])->name('fertile-store');
+Route::get('/fertile/edit{id}', [FertileController::class, 'edit'])->name('fertile-edit');
+Route::put('/fertile/update{id}', [FertileController::class, 'update'])->name('fertile-update');
+Route::delete('/fertile/delete{id}', [FertileController::class, 'destroy'])->name('fertile-delete');
