@@ -56,7 +56,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+        <a class="nav-link" href="{{ route('report-index') }}">
           <i class="ti-gallery menu-icon"></i>
           <span class="menu-title">Laporan Kegiatan</span>
         </a>

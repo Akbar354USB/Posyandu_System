@@ -43,4 +43,11 @@ class ReportController extends Controller
         // return view('Laporan.view', compact('report'));
         return view('Laporan.view', compact('report'));
     }
+
+    public function destroy($id){
+        $report = Report::where("id", $id)->first();
+        $report->delete();
+
+        return redirect()->route('report-index');
+    }
 }

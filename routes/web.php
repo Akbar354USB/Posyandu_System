@@ -91,3 +91,4 @@ Route::get('/report/index', [ReportController::class, 'index'])->name('report-in
 Route::get('/report/view{id}', [ReportController::class, 'view'])->name('report-view');
 Route::get('/report/create', [ReportController::class, 'create'])->name('report-create');
 Route::post('report/store', [ReportController::class, 'store'])->name('report-store');
+Route::delete('/report/delete{id}', [ReportController::class, 'destroy'])->name('report-delete');

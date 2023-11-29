@@ -27,8 +27,8 @@
                 </td>
                 <td align="center" style="width: 500px">{{ $item->note }}</td>
                 <td align="center">
-                  <a class="btn btn-inverse-info" href="{{ route('report-view', $item->id) }}" ><i class="ti-pencil"></i></a>
-                    <form action="" method="post" style="display: inline" class="form-check-inline">
+                  <a class="btn btn-inverse-info" href="{{ route('report-view', $item->id) }}" ><i class="ti-receipt"></i></a>
+                    <form action="{{ route('report-delete', $item->id) }}" method="post" style="display: inline" class="form-check-inline">
                       @csrf
                       @method('DELETE')
                       <button class="btn btn-inverse-danger" type="submit"><i class="ti-trash"></i></button>
