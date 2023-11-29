@@ -7,6 +7,7 @@ use App\Http\Controllers\ToddlerController;
 use App\Http\Controllers\PosyanduController;
 use App\Http\Controllers\PregnantController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\UptoddlerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -80,3 +81,6 @@ Route::post('fertile/store', [FertileController::class, 'store'])->name('fertile
 Route::get('/fertile/edit{id}', [FertileController::class, 'edit'])->name('fertile-edit');
 Route::put('/fertile/update{id}', [FertileController::class, 'update'])->name('fertile-update');
 Route::delete('/fertile/delete{id}', [FertileController::class, 'destroy'])->name('fertile-delete');
+
+//statistik
+Route::get('/statistik/index', [UptoddlerController::class, 'index'])->name('chart-index');

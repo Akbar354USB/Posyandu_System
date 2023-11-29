@@ -26,7 +26,7 @@
         </div>
         <div class="form-group">
           <label>TANGGAL LAHIR</label>
-          <input type="text" class="form-control" name="date_birth">
+          <input type="date" class="form-control" name="date_birth">
           @error('date_birth')
           <span class="text-danger">
             <strong>{{ $message }}</strong>

@@ -70,7 +70,8 @@
   <!-- endinject -->
   <!-- Custom js for this page-->
   <script src="{{ asset('backend/js/dashboard.js') }}"></script>
-  <script src="{{ asset('backend/js/Chart.roundedBarCharts.js') }}"></script>
+  @yield('jschart')
+
   <!-- End custom js for this page-->
 </body>
 
