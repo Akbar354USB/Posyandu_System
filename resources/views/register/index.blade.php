@@ -46,4 +46,9 @@
       </div>
   </div>
 
+  {{-- tag menambahkan pagination --}}
+<div class="mt-3 float-left">
+  {{ $service->links() }}
+</div>
+
 @endsection

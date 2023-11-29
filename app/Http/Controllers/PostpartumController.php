@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PostpartumController extends Controller
 {
     public function index(){
-        $postpartum = Postpartum::all();
+        $postpartum = Postpartum::paginate(5);
         
         return view('Induk.Nifas.index', compact('postpartum'));
     }

@@ -6,6 +6,22 @@
     <div class="card-body">
         <h3 class="text-center mb-3">DAFTAR PASANGAN SUBUR</h3>
         <a href="{{ route('fertile-create') }}"><button type="button" class="btn btn-primary btn-rounded btn-fw mb-2">+ data PUS</button></a>
+        
+        {{-- form search --}}
+        <div class="float-right">
+          <form class="navbar-search form-inline">
+            <div class="input-group">
+                <input type="text" class="form-control bg-light border-1 small" placeholder="Search for..."
+                    aria-label="Search"  value="" name="">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="ti-search"></i>
+                    </button>
+                </div>
+            </div>
+            </form>
+        </div>
+        
         <div class="table-responsive">
           <table class="table table-striped">
             <thead>
@@ -41,5 +57,10 @@
         </div>
       </div>
   </div>
+
+  {{-- tag menambahkan pagination --}}
+<div class="mt-3 float-left">
+  {{ $fertile->links() }}
+</div>
   
   @endsection

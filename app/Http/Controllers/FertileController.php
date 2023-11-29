@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class FertileController extends Controller
 {
     public function index(){
-        $fertile = Fertile::all();
+        $fertile = Fertile::paginate(5);
         
         return view('Induk.Pus.index', compact('fertile'));
     }

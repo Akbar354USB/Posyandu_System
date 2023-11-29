@@ -32,7 +32,7 @@ class ReportController extends Controller
     }
 
     public function index(){
-        $report = Report::all();
+        $report = Report::paginate(5);
         
         return view('Laporan.index', compact('report'));
     }

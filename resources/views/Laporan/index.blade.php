@@ -41,5 +41,10 @@
         </div>
       </div>
   </div>
+
+  {{-- tag menambahkan pagination --}}
+<div class="mt-3 float-left">
+  {{ $report->links() }}
+</div>
   
   @endsection
