@@ -6,6 +6,7 @@ use App\Http\Controllers\PostpartumController;
 use App\Http\Controllers\ToddlerController;
 use App\Http\Controllers\PosyanduController;
 use App\Http\Controllers\PregnantController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UptoddlerController;
 use Illuminate\Support\Facades\Route;
@@ -84,3 +85,9 @@ Route::delete('/fertile/delete{id}', [FertileController::class, 'destroy'])->nam
 
 //statistik
 Route::get('/statistik/index', [UptoddlerController::class, 'index'])->name('chart-index');
+
+//laporan
+Route::get('/report/index', [ReportController::class, 'index'])->name('report-index');
+Route::get('/report/view{id}', [ReportController::class, 'view'])->name('report-view');
+Route::get('/report/create', [ReportController::class, 'create'])->name('report-create');
+Route::post('report/store', [ReportController::class, 'store'])->name('report-store');
