@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FertileController;
 use App\Http\Controllers\KbController;
+use App\Http\Controllers\LpController;
 use App\Http\Controllers\PostpartumController;
 use App\Http\Controllers\ToddlerController;
 use App\Http\Controllers\PosyanduController;
@@ -23,10 +24,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('backend.landingPage');
-});
+// Route::get('/', function () {
+//     return view('backend.landingPage');
+// });
 
+Route::get('/', [LpController::class, 'imageScroll'])->name('image-lp');
 
 //route data Kb
 Route::get('/kb/index', [KbController::class, 'index'])->name('kb-index');

@@ -22,7 +22,7 @@
       <ul class="navbar-nav navbar-nav-right">
         <li class="nav-item nav-profile dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-            <img src="{{ asset('backend/images/face19.jpg') }}" alt="profile"/>
+            <img src="{{ asset('backend/images/face-19.png') }}" alt="profile"/>
           </a>
           <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
           <form action="{{ route('logout') }}" method="POST">
