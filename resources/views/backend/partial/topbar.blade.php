@@ -25,14 +25,13 @@
             <img src="{{ asset('backend/images/face19.jpg') }}" alt="profile"/>
           </a>
           <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-            <a class="dropdown-item">
-              <i class="ti-settings text-primary"></i>
-              Settings
-            </a>
-            <a class="dropdown-item">
-              <i class="ti-power-off text-primary"></i>
-              Logout
-            </a>
+          <form action="{{ route('logout') }}" method="POST">
+            @csrf
+          <button type="submit" class="dropdown-item">
+            <i class="ti-power-off text-primary"></i>
+            Logout
+          </button>
+        </form>
           </div>
         </li>
         <li class="nav-item nav-settings d-none d-lg-flex">

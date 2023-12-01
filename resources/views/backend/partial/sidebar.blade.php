@@ -1,9 +1,15 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="{{ route('home') }}">
           <i class="icon-grid menu-icon"></i>
           <span class="menu-title">Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('user-index') }}">
+          <i class="icon-grid menu-icon"></i>
+          <span class="menu-title">Manage User</span>
         </a>
       </li>
       <li class="nav-item">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Charts\KembangbayiChart;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UptoddlerController extends Controller
@@ -16,6 +17,7 @@ class UptoddlerController extends Controller
         
     //     return view('statistik.index');
     // }
+
 }
 
 //MonthlyUsersCh

@@ -9,6 +9,7 @@ use App\Http\Controllers\PregnantController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UptoddlerController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('backend/master');
+    return view('backend.landingPage');
 });
 
 
@@ -86,9 +87,19 @@ Route::delete('/fertile/delete{id}', [FertileController::class, 'destroy'])->nam
 //statistik
 Route::get('/statistik/index', [UptoddlerController::class, 'index'])->name('chart-index');
 
+
+Route::get('/add/user', [UserController::class, 'addUser'])->name('add-user');
+Route::get('/user/index', [UserController::class, 'indexUser'])->name('user-index');
+Route::delete('/user/delete{id}', [UserController::class, 'destroyUser'])->name('user-delete');
+Route::post('user/store', [UserController::class, 'store'])->name('user-store');
+
 //laporan
 Route::get('/report/index', [ReportController::class, 'index'])->name('report-index');
 Route::get('/report/view{id}', [ReportController::class, 'view'])->name('report-view');
 Route::get('/report/create', [ReportController::class, 'create'])->name('report-create');
 Route::post('report/store', [ReportController::class, 'store'])->name('report-store');
 Route::delete('/report/delete{id}', [ReportController::class, 'destroy'])->name('report-delete');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
