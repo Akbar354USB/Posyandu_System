@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Posyandu;
 use App\Models\Toddler;
+// use Barryvdh\DomPDF\PDF;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ToddlerController extends Controller
@@ -60,5 +63,16 @@ class ToddlerController extends Controller
         $toddler->update($request->all());
 
         return redirect()->route('toddler-index');
+    }
+
+    public function exportpdf(){
+        $toddlers = Toddler::all();
+
+        // view()->share('data', $data);
+        // $pdf = PDF::loadview('balita-pdf');
+        // return $pdf->download('dataBalita.pdf');
+
+        $pdf = Pdf::loadView('Induk.Balita.export-pdf', ['toddlers' => $toddlers])->setPaper('a4', 'landscape');
+        return $pdf->download('balita.pdf'. Carbon::now()->timestamp.'.pdf');
     }
 }

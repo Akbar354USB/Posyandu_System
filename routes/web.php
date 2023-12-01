@@ -89,6 +89,9 @@ Route::delete('/fertile/delete{id}', [FertileController::class, 'destroy'])->nam
 //statistik
 Route::get('/statistik/index', [UptoddlerController::class, 'index'])->name('chart-index');
 
+//exportPDF
+Route::get('/export/toddler', [ToddlerController::class, 'exportpdf'])->name('toddler-pdf');
+
 
 Route::get('/add/user', [UserController::class, 'addUser'])->name('add-user');
 Route::get('/user/index', [UserController::class, 'indexUser'])->name('user-index');

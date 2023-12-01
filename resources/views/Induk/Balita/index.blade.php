@@ -6,6 +6,10 @@
     <div class="card-body">
         <h3 class="text-center mb-3">DAFTAR BALITA</h3>
         <a href="{{ route('todller-create') }}"><button type="button" class="btn btn-primary btn-rounded btn-fw mb-2">+ data balita</button></a>
+        <a href="{{ route('toddler-pdf') }}"><button type="button" class="btn btn-outline-success btn-icon-text">
+          PDF
+          <i class="ti-printer btn-icon-append"></i>                                                                              
+        </button></a>
         
         {{-- form search --}}
         <div class="float-right">
