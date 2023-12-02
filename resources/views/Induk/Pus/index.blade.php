@@ -6,7 +6,11 @@
     <div class="card-body">
         <h3 class="text-center mb-3">DAFTAR PASANGAN SUBUR</h3>
         <a href="{{ route('fertile-create') }}"><button type="button" class="btn btn-primary btn-rounded btn-fw mb-2">+ data PUS</button></a>
-        
+        <a href="{{ route('fertile-pdf') }}"><button type="button" class="btn btn-outline-success btn-icon-text">
+          PDF
+          <i class="ti-printer btn-icon-append"></i>                                                                              
+        </button></a>
+
         {{-- form search --}}
         <div class="float-right">
           <form class="navbar-search form-inline">

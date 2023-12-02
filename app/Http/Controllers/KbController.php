@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kb;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class KbController extends Controller
@@ -56,5 +58,12 @@ class KbController extends Controller
         $kb->update($request->all());
 
         return redirect()->route('kb-index');
+    }
+
+    public function exportpdf(){
+        $kb = Kb::all();
+
+        $pdf = Pdf::loadView('Induk.KB.export-pdf', ['kb' => $kb])->setPaper('a4', 'landscape');
+        return $pdf->download('KB '. Carbon::now()->timestamp.'.pdf');
     }
 }

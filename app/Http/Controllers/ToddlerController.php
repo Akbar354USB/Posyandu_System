@@ -68,10 +68,6 @@ class ToddlerController extends Controller
     public function exportpdf(){
         $toddlers = Toddler::all();
 
-        // view()->share('data', $data);
-        // $pdf = PDF::loadview('balita-pdf');
-        // return $pdf->download('dataBalita.pdf');
-
         $pdf = Pdf::loadView('Induk.Balita.export-pdf', ['toddlers' => $toddlers])->setPaper('a4', 'landscape');
         return $pdf->download('balita.pdf'. Carbon::now()->timestamp.'.pdf');
     }

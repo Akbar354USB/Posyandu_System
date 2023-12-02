@@ -91,6 +91,10 @@ Route::get('/statistik/index', [UptoddlerController::class, 'index'])->name('cha
 
 //exportPDF
 Route::get('/export/toddler', [ToddlerController::class, 'exportpdf'])->name('toddler-pdf');
+Route::get('/export/pregnant', [PregnantController::class, 'exportpdf'])->name('pregnant-pdf');
+Route::get('/export/kb', [KbController::class, 'exportpdf'])->name('kb-pdf');
+Route::get('/export/pospartum', [PostpartumController::class, 'exportpdf'])->name('pospartum-pdf');
+Route::get('/export/fertile', [FertileController::class, 'exportpdf'])->name('fertile-pdf');
 
 
 Route::get('/add/user', [UserController::class, 'addUser'])->name('add-user');

@@ -6,7 +6,11 @@
     <div class="card-body">
         <h3 class="text-center mb-3">DAFTAR IBU NIFAS</h3>
         <a href="{{ route('postpartum-create') }}"><button type="button" class="btn btn-primary btn-rounded btn-fw mb-2">+ data ibu nifas</button></a>
-        
+        <a href="{{ route('pospartum-pdf') }}"><button type="button" class="btn btn-outline-success btn-icon-text">
+          PDF
+          <i class="ti-printer btn-icon-append"></i>                                                                              
+        </button></a>
+
         {{-- form search --}}
         <div class="float-right">
           <form class="navbar-search form-inline">
@@ -33,7 +37,7 @@
                 <th class="text-center">TTL</th>
                 <th class="text-center">TELPON</th>
                 <th class="text-center">TANGGAL MELAHIRKAN</th>
-                <th class="text-center">STATUS MELAHIRKAN</th>
+                <th class="text-center">STATUS MENYUSUI</th>
                 <TH class="text-center">AKSI</TH>
               </tr>
             </thead>

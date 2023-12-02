@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Pregnant;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Carbon\Carbon;
 
 class PregnantController extends Controller
 {
@@ -52,5 +54,12 @@ class PregnantController extends Controller
         $pregnant ->update($request->all());
 
         return redirect()->route('pregnant-index');
+    }
+
+    public function exportpdf(){
+        $pregnant = Pregnant::all();
+
+        $pdf = Pdf::loadView('Induk.Hamil.export-pdf', ['pregnant' => $pregnant])->setPaper('a4', 'landscape');
+        return $pdf->download('IbuHamil '. Carbon::now()->timestamp.'.pdf');
     }
 }

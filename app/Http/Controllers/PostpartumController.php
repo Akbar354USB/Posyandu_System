@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Postpartum;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class PostpartumController extends Controller
@@ -56,5 +58,12 @@ class PostpartumController extends Controller
         $postpartum->update($request->all());
 
         return redirect()->route('postpartum-index');
+    }
+
+    public function exportpdf(){
+        $pospartum = Postpartum::all();
+
+        $pdf = Pdf::loadView('Induk.Nifas.export-pdf', ['pospartum' => $pospartum])->setPaper('a4', 'landscape');
+        return $pdf->download('Ibu Nifas '. Carbon::now()->timestamp.'.pdf');
     }
 }

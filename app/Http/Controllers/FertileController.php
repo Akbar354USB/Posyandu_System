@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Fertile;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class FertileController extends Controller
@@ -52,6 +54,13 @@ class FertileController extends Controller
         $fertile->update($request->all());
 
         return redirect()->route('fertile-index');
+    }
+
+    public function exportpdf(){
+        $fertile = Fertile::all();
+
+        $pdf = Pdf::loadView('Induk.Pus.export-pdf', ['fertile' => $fertile])->setPaper('a4', 'landscape');
+        return $pdf->download('PUS '. Carbon::now()->timestamp.'.pdf');
     }
 
 }

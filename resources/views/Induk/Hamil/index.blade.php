@@ -6,7 +6,10 @@
     <div class="card-body">
         <h3 class="text-center mb-3">DAFTAR IBU HAMIL</h3>
         <a href="{{ route('pregnant-create') }}"><button type="button" class="btn btn-primary btn-rounded btn-fw mb-2">+ data ibu hamil</button></a>
-                
+        <a href="{{ route('pregnant-pdf') }}"><button type="button" class="btn btn-outline-success btn-icon-text">
+          PDF
+          <i class="ti-printer btn-icon-append"></i>                                                                              
+        </button></a>
         {{-- form search --}}
                 <div class="float-right">
                   <form class="navbar-search form-inline">
