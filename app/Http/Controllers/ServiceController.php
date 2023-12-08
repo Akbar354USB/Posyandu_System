@@ -32,7 +32,7 @@ class ServiceController extends Controller
     }
 
     public function index(){
-        $service = Service::with("Toddler")->paginate(5);
+        $service = Service::with("Toddler")->paginate(10);
 
         return view('register.index', compact('service'));
     }

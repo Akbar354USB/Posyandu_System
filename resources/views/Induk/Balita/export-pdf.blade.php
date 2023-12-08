@@ -40,7 +40,7 @@
         @endforeach
         </tbody>
       </table>
-      <h5>Di Dowload tanggal : {{ date('d-m-Y') }}</h5>
+      <h5><i>Di Dowload tanggal : {{ date('d-m-Y') }}</i></h5>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

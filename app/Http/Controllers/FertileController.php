@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class FertileController extends Controller
 {
     public function index(){
-        $fertile = Fertile::paginate(5);
+        $fertile = Fertile::paginate(10);
         
         return view('Induk.Pus.index', compact('fertile'));
     }

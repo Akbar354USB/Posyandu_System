@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 class ToddlerController extends Controller
 {
     public function index(){
-        $todller = Toddler::with("Posyandu")->paginate(5);
+        $todller = Toddler::with("Posyandu")->paginate(10);
 
         return view('Induk.Balita.index', compact('todller'));
     }

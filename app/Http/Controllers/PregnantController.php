@@ -31,7 +31,7 @@ class PregnantController extends Controller
     }
 
     public function index(){
-        $pregnant = Pregnant::paginate(5);
+        $pregnant = Pregnant::paginate(10);
 
         return view('Induk.Hamil.index', compact('pregnant'));
     }

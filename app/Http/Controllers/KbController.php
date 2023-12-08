@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class KbController extends Controller
 {
     public function index(){
-        $kb = Kb::paginate(5);
+        $kb = Kb::paginate(10);
         
         return view('Induk.KB.index', compact('kb'));
     }
