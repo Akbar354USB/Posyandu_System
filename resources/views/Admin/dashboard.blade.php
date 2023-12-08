@@ -16,7 +16,7 @@
         <div class="col-md-6 grid-margin stretch-card">
           <div class="card tale-bg">
             <div class="card-people mt-auto">
-              <img src="{{ asset('backend/images//dashboard.png') }}" alt="people" style="height: 400px">
+              <img src="{{ asset('backend/images//dashboard.svg') }}" alt="people" style="height: 400px">
               <div class="weather-info">
               </div>
             </div>
